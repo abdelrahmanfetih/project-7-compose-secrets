@@ -13,4 +13,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker image
+        env:
+          APP_SECRET: ${{ secrets.APP_SECRET }}
         run: docker build -t project7-app .
